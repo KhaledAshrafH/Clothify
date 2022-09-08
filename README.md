@@ -1,2 +1,2 @@
 # OnlineShoppingWebsite
-Online Shopping (Clothes) using Angular 
+Online Shopping (Clothes) using Angular.
