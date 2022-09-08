@@ -1,0 +1,111 @@
+{ "products": [
+  {
+    "id": 1,
+    "name": "Black coffee",
+    "price": 432.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/03/Dapper-Style-Clothes-for-Men.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "menClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 2,
+    "name": "Black coffee",
+    "price": 133.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/03/dapper-outfit-mens-vibrant-color.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "menClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 3,
+    "name": "Black coffee",
+    "price": 345.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/03/dapper-outfit-mens-suit-1024x768.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "menClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 4,
+    "name": "Black coffee",
+    "price": 343.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/03/Turtlenecks-Dapper-Outfit-Mens.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "menClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 5,
+    "name": "Black coffee",
+    "price": 465.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/01/Chic-Office-Style-how-to-wear-a-mens-T-shirt-as-a-woman-1024x1536.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "womenClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 6,
+    "name": "Black coffee",
+    "price": 645.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/01/menswear-victoria-beckham-how-to-wear-a-mens-T-shirt-as-a-woman.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "womenClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 7,
+    "name": "Black coffee",
+    "price": 546.5,
+    "image": "https://ae04.alicdn.com/kf/H2b9ad9aef91a4aad82eed041646202a7X/-.jpg_640x640.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "womenClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 8,
+    "name": "Black coffee",
+    "price": 645.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/01/Chic-Office-Style-how-to-wear-a-mens-T-shirt-as-a-woman-1024x1536.jpg",
+    "size": "XL",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "womenClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  },
+  {
+    "id": 9,
+    "name": "red coffee",
+    "price": 456.5,
+    "image": "https://riverism.com/blogs/wp-content/uploads/2022/01/Chic-Office-Style-how-to-wear-a-mens-T-shirt-as-a-woman-1024x1536.jpg",
+    "size": "X",
+    "description": "Best black t-shirt",
+    "is_added_to_cart": false,
+    "category": "womenClothes",
+    "bought_items_count": 2,
+    "color": "red"
+  }
+]
+}

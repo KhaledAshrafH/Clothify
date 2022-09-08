@@ -1,0 +1,27 @@
+
+  <td><button class="btn btn-warning" type="submit" style=" margin-top:4vh;margin-left:2vh;font-weight: bolder;" routerLink="/create" >Add Item</button></td>
+<table class="table table-dark" style="margin-top: 1vh;">
+
+  <thead>
+  <tr>
+    <th scope="col">#ID</th>
+    <th scope="col">Product Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Price</th>
+    <th scope="col" style>Delete Item</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td><button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" (click)="removeItem(product.id)">Remove</button></td>
+    <td>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+

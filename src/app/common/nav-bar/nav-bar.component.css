@@ -1,0 +1,25 @@
+.bg-dark{
+
+  background-color: #212529!important;
+}
+.carousel-caption {
+  background-color: rgb(0 0 0 / 46%);
+  text-align: left;
+  padding: 25px;
+  border-radius: 10px;
+}
+ol.carousel-indicators {
+  display: block;
+  left: auto;
+  bottom: 50px;
+  right: 15px;
+}
+.carousel-indicators li {
+  height: 5px;
+  background-color: #ffeb3b;
+  opacity: .6;
+}
+.btn-primary{
+  background-color: #212529;
+  border-color: rgba(239, 239, 239, 0.7);
+}

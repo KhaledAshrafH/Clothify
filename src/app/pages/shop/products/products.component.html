@@ -1,0 +1,63 @@
+<div class="contFilter" *ngIf="viewSelector">
+  <div class="subContFilter">
+    <select class="form-select" aria-label="Default select example" (change)="selectCategory($event)" >
+      <option selected>Choose Specific Category</option>
+      <option value="All Clothing">All Clothes</option>
+      <option value="MEN">Men's Clothes</option>
+      <option value="WOMEN">Women's Clothes</option>
+    </select>
+  </div>
+</div>
+<h1 class="fontHeader">{{clothesType}}</h1>
+<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative" *ngIf="!loading">
+  <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+    <div class="col hp"  *ngFor="let item of allData; index as i">
+      <div class="card h-100 shadow-sm">
+        <a [routerLink]="['/shop/productDetails',i]">
+          <img [src]="item['image']" class="card-img-top" alt="product.title" width="200px" height="50px" />
+        </a>
+
+        <div class="label-top shadow-sm">
+          <a class="text-white" href="#" style="background-color:#730a44; font-size: 20px; border-radius: 20px; text-decoration:none; padding: 10px">{{item['price'] + "$"}}</a>
+
+        </div>
+        <div class="card-body">
+          <div class="clearfix mb-3">
+            <span class="float-start badge rounded-pill bg-success" style="text-align: center; margin-left: 25%; font-size: 20px">{{item['name']}}</span>
+
+          </div>
+          <h5 class="card-price">
+            <a target="_blank" >{{item['description']}}</a>
+          </h5>
+
+          <div class="d-grid gap-2 my-4">
+            <div *ngIf="added!==i">
+              <input type="number" class="form-control" required [(ngModel)]="amount">
+            </div>
+            <button class="btn btn-primary" type="submit" style="background-color: #730a44; border-color: #730a44" (click)="addToCart(i)" *ngIf="added!==i">Add to Cart</button>
+            <button class="btn btn-primary" type="submit" style="background-color: #102036; border-color: #102036; animation-delay: 1000ms; margin: 3vh" (click)="addToCart(i) " *ngIf="added===i" >Added</button>
+
+
+          </div>
+          <div class="clearfix mb-1">
+
+            <span class="float-start"><a href="#"><i class="fas fa-question-circle"></i></a></span>
+
+            <span class="float-end">
+              <i class="far fa-heart" style="cursor: pointer"></i>
+
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="text-center w-100" *ngIf="loading">
+  <div class="wrap">
+    <div class="spinner"></div>
+
+  </div>
+</div>

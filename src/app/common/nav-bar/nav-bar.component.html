@@ -1,0 +1,54 @@
+<!-- Header Section -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h2 class="text-warning">E-Commerce</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mob-navbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about"><i class="bi bi-info-circle-fill" (click)="checkLogin()"></i> About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/shop" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-cart-dash-fill"></i> Shop</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="shop/men">Men Clothes</a></li>
+              <li><a class="dropdown-item" routerLink="shop/women">Women Clothes</a></li>
+
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contactus"><i class="bi bi-send-fill"></i> Contact Us</a>
+          </li>
+          <li class="nav-item" *ngIf="((userLogin.length-2) > 0)">
+            <button type="button" class="btn btn-primary position-relative" routerLink="user-cart/cart">
+              <i class="bi bi-basket-fill"></i> Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" (change)="itemsChanged()"  >
+                  {{numOfItemsAdded}}
+               <span class="visually-hidden"></span>
+            </span>
+            </button>
+
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="( (userLogin.length-2) == 0)" routerLink="auth/login">Login</button>
+          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2) == 0)" routerLink="auth/register">Register</button>
+
+          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="((userLogin.length-2) > 0)" routerLink="account"><i class="bi bi-person-fill" ></i>My Profile</button>
+          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2)>0)" routerLink="auth/register" (click)="logout()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End Header Section -->
+

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img [src]="item['image']" style="max-height: 500px; border-radius: 10px"/></div>
+
+          </div>
+
+
+        </div>
+        <div class="details col-md-6" style="margin-top: 16vh; text-align: center" >
+          <h3 class="product-title">{{item['category'] + ' Clothes'}}</h3>
+
+          <p class="product-description">{{item['description']}}</p>
+          <h4 class="price">current price: <span>{{item['price']+'$'}}</span></h4>
+          <h5 class="sizes">sizes:
+            <span class="size" data-toggle="tooltip" title="small" style="margin-left: 5px">S</span>
+            <span class="size" data-toggle="tooltip" title="medium">M</span>
+            <span class="size" data-toggle="tooltip" title="large">L</span>
+            <span class="size" data-toggle="tooltip" title="xtra large">XL</span>
+            <span class="size" data-toggle="tooltip" title="xtra large">XS</span>
+            <span class="size" data-toggle="tooltip" title="xtra large">XXL</span>
+            <span class="size" data-toggle="tooltip" title="xtra large">XXS</span>
+          </h5>
+
+          <div class="action">
+            <div *ngIf="added!==this.id" style="margin-bottom: 2vh">
+              <input type="number" class="form-control" required [(ngModel)]="amount">
+            </div>
+            <button class="btn btn-warning" type="submit" style=" ; font-weight: bolder; font-size: 20px; width: 100%" (click)="addToCart()" *ngIf="added!==this.id">Add to Cart</button>
+            <button class="btn btn-primary" type="submit" style="background-color: #102036; border-color: #102036; animation-delay: 1000ms; margin: 3vh;width: 100%" *ngIf="added===this.id" >Added</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
