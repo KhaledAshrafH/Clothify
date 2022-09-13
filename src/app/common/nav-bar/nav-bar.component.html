@@ -40,11 +40,11 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="( (userLogin.length-2) == 0)" routerLink="auth/login">Login</button>
-          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2) == 0)" routerLink="auth/register">Register</button>
+          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="( (userLogin.length-2) == 0 || !checkLogin())" routerLink="auth/login">Login</button>
+          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2) == 0 || !checkLogin())" routerLink="auth/register">Register</button>
 
-          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="((userLogin.length-2) > 0)" routerLink="account"><i class="bi bi-person-fill" ></i>My Profile</button>
-          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2)>0)" routerLink="auth/register" (click)="logout()">Logout</button>
+          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="((userLogin.length-2) > 0) && checkLogin()" routerLink="account"><i class="bi bi-person-fill" ></i>My Profile</button>
+          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2)>0) && checkLogin()" routerLink="auth/register" (click)="logout()">Logout</button>
         </form>
       </div>
     </div>

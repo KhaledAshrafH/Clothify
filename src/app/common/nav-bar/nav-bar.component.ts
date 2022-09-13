@@ -29,9 +29,7 @@ export class NavBarComponent implements OnInit {
   }
 
   checkLogin() {
-    // this.userLogin= JSON.stringify(localStorage.getItem('userLogin'));
-    // return (this.userLogin=="true");
-
+    return localStorage.getItem("userLogin") !== null;
   }
 
   pressLogin() {
