@@ -15,6 +15,7 @@ export class WomenComponent implements OnInit {
   addButton:boolean=false;
   loading:boolean=false;
   amount: number=0;
+  errorCheck=false;
   viewSelector:boolean=false;
   clothesType: string ="WOMEN";
   constructor(private _ProductServiceService:ProductServiceService) {
@@ -32,8 +33,8 @@ export class WomenComponent implements OnInit {
         this.loading=false;
       },
       (error)=>{
-        alert(error);
         this.loading=false;
+        this.errorCheck=true;
       });
   }
   addToCart(index: number) {

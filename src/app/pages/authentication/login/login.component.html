@@ -1,6 +1,11 @@
 
 <main class="form-signin" style="margin-top: 5vh">
   <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+    <div *ngIf="loginForm.errors?.unauthenticated">
+      <div class="alert alert-danger" role="alert">
+        Your Email or Password not correct. try again!
+      </div>
+    </div>
     <img class="mb-4" src="assets/pics/—Pngtree—smiling%20people%20avatar%20set%20different_7690740.png" alt="avatar" width="100" height="100">
     <h1 class="h3 mb-3 fw-normal" class="text-center">Please Login</h1>
 
@@ -23,6 +28,7 @@
       </label>
     </div>
     <button [disabled]="!loginForm.valid" type="submit" id="myBtn3" class="w-100 btn btn-lg btn-primary"> Login </button>
+
   </form>
 
 

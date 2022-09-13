@@ -154,7 +154,7 @@
   text-decoration: none;
   outline: 0;
   /* box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25); */
-  border-radius: 100px;
+  /*border-radius: 100px;*/
 }
 .btn-warning:hover {
   background: var(--btnbghover);
@@ -279,3 +279,7 @@ img{
   text-shadow: #252525 7px 7px 25px;
 }
 
+
+.errorPage{
+  padding: 13vh 6vh 6vh;
+}

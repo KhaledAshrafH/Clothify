@@ -14,6 +14,7 @@ export class MenComponent implements OnInit {
   addButton:boolean=false;
   loading:boolean=false;
   amount: number=0;
+  errorCheck=false;
   viewSelector:boolean=false;
   clothesType: string ="MEN";
   constructor(private _ProductServiceService:ProductServiceService) {
@@ -33,6 +34,7 @@ export class MenComponent implements OnInit {
       (error)=>{
         alert(error);
         this.loading=false;
+        this.errorCheck=true;
       });
   }
   addToCart(index: number) {

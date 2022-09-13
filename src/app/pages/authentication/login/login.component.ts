@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   });
 
   isLogin=false;
+  unauthenticated=false;
   @ViewChild('invalidCredentials', {static: true}) invCredentials: TemplateRef<any> | undefined;
   authCredentialsDto: any;
   user:any;
@@ -47,28 +48,29 @@ export class LoginComponent implements OnInit {
     if(!localStorage.getItem("email")){
       localStorage.setItem("email", "");
     }
-    this.isLogin=true;
-    localStorage.setItem('userLogin','true')
-    console.log(this.loginForm.value);
+
     this.authService.login(this.loginForm.value).subscribe(
       res => {
         localStorage.setItem("token", res.token);
+        this.isLogin=true;
+        localStorage.setItem('userLogin','true')
+        console.log(this.loginForm.value);
         this.authService.name=res.name;
         this.authService.email=res.email;
         localStorage.setItem("name", res.name);
         localStorage.setItem("email", res.email);
         this.isLogin=true;
+        this.name=this.authService.name;
         this.router.navigate(['/home'])
           .then(() => {
             window.location.reload();
           });
       },
       error => {
-        this.alertService.error(error);
-        //this.openModal(this.invCredentials);
+        this.loginForm.setErrors({ unauthenticated: true });
       }
     );
-    this.name=this.authService.name;
+
 
   }
 

@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   addButton:boolean=false;
   loading:boolean=false;
   amount: number=0;
+  errorCheck=false;
   viewSelector:boolean=true;
   clothesType: string ="All Clothes";
   constructor(private _ProductServiceService:ProductServiceService,private _CartService:CartService) {
@@ -27,12 +28,13 @@ export class ProductsComponent implements OnInit {
   }
   getProducts(){
     this.loading=true;
+
     this._ProductServiceService.getProducts().subscribe((data)=>{
         this.allData=data;
         this.loading=false;
       },
       (error)=>{
-        alert(error);
+        this.errorCheck=true;
         this.loading=false;
       });
   }

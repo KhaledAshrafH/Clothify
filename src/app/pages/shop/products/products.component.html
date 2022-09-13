@@ -1,4 +1,4 @@
-<div class="contFilter" *ngIf="viewSelector">
+<div class="contFilter" *ngIf="viewSelector && !errorCheck">
   <div class="subContFilter">
     <select class="form-select" aria-label="Default select example" (change)="selectCategory($event)" >
       <option selected>Choose Specific Category</option>
@@ -8,8 +8,8 @@
     </select>
   </div>
 </div>
-<h1 class="fontHeader">{{clothesType}}</h1>
-<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative" *ngIf="!loading">
+<h1 class="fontHeader" *ngIf="!loading && !errorCheck">{{clothesType}}</h1>
+<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative" *ngIf="!loading && !errorCheck">
   <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
     <div class="col hp"  *ngFor="let item of allData; index as i">
       <div class="card h-100 shadow-sm">
@@ -55,7 +55,22 @@
   </div>
 </div>
 
-<div class="text-center w-100" *ngIf="loading">
+
+  <div class="d-flex align-items-center justify-content-center errorPage" *ngIf="!loading && errorCheck">
+    <div class="text-center">
+      <h1 class="display-1 fw-bold">401</h1>
+      <p class="fs-3"> <span class="text-danger">Opps!</span> You haven't registered yet!.</p>
+      <p class="lead">
+        you must login before show my products.
+      </p>
+<!--      <a href="index.html" class="btn btn-primary" style="background-color: #ffeb3b">Go to Login Page</a>-->
+      <button class="btn btn-warning" type="submit" style=" font-weight: bolder ;background-color: #ffc107"  routerLink="/auth/login">Go to Login Page</button>
+    </div>
+  </div>
+
+
+
+<div class="text-center w-100" *ngIf="loading && !errorCheck">
   <div class="wrap">
     <div class="spinner"></div>
 

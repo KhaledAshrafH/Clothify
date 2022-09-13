@@ -12,11 +12,10 @@ export class NavBarComponent implements OnInit {
 
   public numOfItemsAdded = 0;
   //public userLogin:boolean=true;
-
   public userLogin: string = JSON.stringify(localStorage.getItem('userLogin'));
 
   constructor(private _CartService: CartService, private _AuthService: AuthService, private _Router: Router) {
-
+    if(localStorage.getItem('cartQ'))
     this.numOfItemsAdded = JSON.parse(localStorage.getItem('cartQ')!).length;
     console.log(this.userLogin.length);
     console.log(localStorage.getItem('token'));
