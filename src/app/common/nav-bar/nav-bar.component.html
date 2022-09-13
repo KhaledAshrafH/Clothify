@@ -28,7 +28,7 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="contactus"><i class="bi bi-send-fill"></i> Contact Us</a>
           </li>
-          <li class="nav-item" *ngIf="((userLogin.length-2) > 0)">
+          <li class="nav-item" *ngIf="((userLogin.length-2) > 0) && checkLogin()">
             <button type="button" class="btn btn-primary position-relative" routerLink="user-cart/cart">
               <i class="bi bi-basket-fill"></i> Cart
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" (change)="itemsChanged()"  >

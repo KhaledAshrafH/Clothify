@@ -47,6 +47,7 @@ export class NavBarComponent implements OnInit {
     localStorage.setItem('name', "");
     localStorage.setItem('email', "");
     this.userLogin = "";
+    localStorage.clear();
     this._Router.navigate(['/home'])
       .then(() => {
         window.location.reload();
