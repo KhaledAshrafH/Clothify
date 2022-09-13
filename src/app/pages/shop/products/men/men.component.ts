@@ -3,8 +3,8 @@ import {ProductServiceService} from "../../../../services/product-service.servic
 
 @Component({
   selector: 'app-men',
-  templateUrl: '../products.component.html',
-  styleUrls: ['../products.component.css']
+  templateUrl: '.././products.component.html',
+  styleUrls: ['.././products.component.css']
 })
 export class MenComponent implements OnInit {
   allData=[];

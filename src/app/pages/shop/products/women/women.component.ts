@@ -3,8 +3,8 @@ import {ProductServiceService} from "../../../../services/product-service.servic
 
 @Component({
   selector: 'app-women',
-  templateUrl: '../products.component.html',
-  styleUrls: ['../products.component.css']
+  templateUrl: '.././products.component.html',
+  styleUrls: ['.././products.component.css']
 })
 export class WomenComponent implements OnInit {
 
