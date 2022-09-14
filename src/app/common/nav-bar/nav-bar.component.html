@@ -44,22 +44,26 @@
 
 <!--          <button class="btn btn-warning" type="submit" style=" font-weight: bolder" *ngIf="((userLogin.length-2) > 0) && checkLogin()" routerLink="account"><i class="bi bi-person-fill" ></i>My Profile</button>-->
 <!--          <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2)>0) && checkLogin()" routerLink="home" (click)="logout()">Logout</button>-->
-
-          <div class="User-area" *ngIf="((userLogin.length-2) > 0) && checkLogin()" (click)="showDetails()" style="text-align: center;margin: auto">
+          <div class="User-area" *ngIf="((userLogin.length-2) > 0) && checkLogin()" (click)="showDetails()" style="text-align: center;margin: auto;z-index: 10000">
             <div class="User-avtar">
               <img [src]="imgProfilePath"/>
             </div>
-            <ul class="User-Dropdown U-open" *ngIf="checkPress">
+            <ul class="User-Dropdown U-open" *ngIf="checkPress" style="z-index: 10000;">
               <li><a routerLink="account">My Profile</a></li>
               <li><a routerLink="home" (click)="logout()">Logout</a></li>
             </ul>
           </div>
 
 
+
         </form>
+
       </div>
+
     </div>
+
   </nav>
+
 </header>
 <!-- End Header Section -->
 

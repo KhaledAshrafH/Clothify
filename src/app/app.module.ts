@@ -23,7 +23,7 @@ import {FormsModule} from "@angular/forms";
 import {TokenInterceptorService} from "./services/token-interceptor.service";
 import { AdminComponent } from './Admin/admin/admin.component';
 import { CreateComponent } from './Admin/create/create.component';
-
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,8 @@ import { CreateComponent } from './Admin/create/create.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgxUsefulSwiperModule
 
   ],
   providers: [

@@ -1,48 +1,35 @@
-<!-- Banner Section -->
+<swiper [config]="config" style="width: 100%;margin:auto;height: 20rem" *ngIf="!check">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%"></div>
 
-<header>
 
-<section id="banner" >
 
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
-
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" >
-      <div class="carousel-item active" style="height: 80vh">
-        <img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" class="d-block w-100" alt="..." style="height: 80vh">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Women Clothes</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" class="d-block w-100" alt="..." style="height: 80vh">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Casual Clothes</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="..." style="height: 80vh">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Men Clothes</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
   </div>
-</section>
-</header>
-<!-- End Banner Section -->
+  <div>
+    <div class="swiper-pagination" style="z-index: 1"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next" style="z-index: 1"></div>
+    <div class="swiper-button-prev" style="z-index: 1"></div>
+  </div>
+  <!-- Add Pagination -->
+</swiper>
+
+
+<swiper [config]="config" style="width: 100%;margin:auto;height: 30rem" *ngIf="check">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%"></div>
+
+
+  </div>
+  <div *ngIf="check">
+    <div class="swiper-pagination" style="z-index: 1"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next" style="z-index: 1"></div>
+    <div class="swiper-button-prev" style="z-index: 1"></div>
+  </div>
+  <!-- Add Pagination -->
+</swiper>

@@ -28,7 +28,8 @@
               "./node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "./node_modules/primeicons/primeicons.css",
               "./node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "./node_modules/primeng/resources/primeng.min.css"
+              "./node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/swiper/swiper-bundle.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",

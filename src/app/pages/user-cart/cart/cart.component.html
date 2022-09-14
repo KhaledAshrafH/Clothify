@@ -1,56 +1,57 @@
+
 <div class="back">
 
-<div class="card">
-  <div class="row">
-    <div class="col-md-8 cart">
-      <div class="title">
-        <div class="row">
-          <div class="col"><h4><b>Shopping Cart</b></h4></div>
-          <div class="col align-self-center text-right text-muted">{{itemAdded.length}} items</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-8 cart">
+          <div class="title">
+            <div class="row">
+              <div class="col"><h4><b>Shopping Cart</b></h4></div>
+              <div class="col align-self-center text-right text-muted">{{itemAdded.length}} items</div>
+            </div>
+          </div>
+          <div class="row border-top border-bottom" *ngFor="let item of itemAdded;let i=index">
+            <div class="row main align-items-center">
+              <div class="col-2"><img class="img-fluid" [src]="item['image']"></div>
+              <div class="col">
+                <div class="row text-muted">item</div>
+                <div class="row">{{item['title']}}</div>
+              </div>
+              <div class="col">
+                <a  (click)="decreaseQty(i)" style="cursor: pointer">-</a><a class="border" style="text-decoration: none">{{itemAddedQty[i]}}</a><a (click)="increaseQty(i)" style="cursor: pointer; ">+</a>
+              </div>
+              <div class="col">$ {{item['price']}} </div><button class="btn btn-primary" type="submit" style="background-color: #000000; border-color: #070707;border-radius: 5px; animation-delay: 1000ms; width: 20%;margin: auto" (click)="removeItem(i)">Remove Item</button>
+            </div>
+          </div>
+
+          <div class="back-to-shop"><a routerLink="/shop">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+        </div>
+        <div class="col-md-4 summary">
+          <div><h5><b>Summary</b></h5></div>
+          <hr>
+          <div class="row" *ngFor="let element of itemAdded;let i = index">
+            <div class="col" style="padding-left:0;">{{element['name']}}</div>
+            <div class="col text-right">$ {{(element['price']) * itemAddedQty[i] }}</div>
+          </div>
+          <form>
+            <p>SHIPPING</p>
+            <select><option class="text-muted">Standard-Delivery- $5.00</option></select>
+
+          </form>
+          <button class="btn" *ngIf="!checkCalculated" (click)="calcPrice() " style="border-radius: 5px">Check Total Salary</button>
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;" *ngIf="checkCalculated">
+            <div class="col">TOTAL PRICE</div>
+            <div class="col text-right">$ {{totalPrice}}</div>
+          </div>
+
+          <button class="btn" style="border-radius: 5px">CHECKOUT</button>
         </div>
       </div>
-      <div class="row border-top border-bottom" *ngFor="let item of itemAdded;let i=index">
-        <div class="row main align-items-center">
-          <div class="col-2"><img class="img-fluid" [src]="item['image']"></div>
-          <div class="col">
-            <div class="row text-muted">item</div>
-            <div class="row">{{item['title']}}</div>
-          </div>
-          <div class="col">
-            <a  (click)="decreaseQty(i)" style="cursor: pointer">-</a><a class="border" style="text-decoration: none">{{itemAddedQty[i]}}</a><a (click)="increaseQty(i)" style="cursor: pointer; ">+</a>
-          </div>
-          <div class="col">$ {{item['price']}} </div><button class="btn btn-primary" type="submit" style="background-color: #000000; border-color: #070707;border-radius: 5px; animation-delay: 1000ms; width: 20%;margin: auto" (click)="removeItem(i)">Remove Item</button>
-        </div>
-      </div>
 
-      <div class="back-to-shop"><a routerLink="/shop">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
-    </div>
-    <div class="col-md-4 summary">
-      <div><h5><b>Summary</b></h5></div>
-      <hr>
-      <div class="row" *ngFor="let element of itemAdded;let i = index">
-        <div class="col" style="padding-left:0;">{{element['name']}}</div>
-        <div class="col text-right">$ {{(element['price']) * itemAddedQty[i] }}</div>
-      </div>
-      <form>
-        <p>SHIPPING</p>
-        <select><option class="text-muted">Standard-Delivery- $5.00</option></select>
-
-      </form>
-      <button class="btn" *ngIf="!checkCalculated" (click)="calcPrice() " style="border-radius: 5px">Check Total Salary</button>
-      <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;" *ngIf="checkCalculated">
-        <div class="col">TOTAL PRICE</div>
-        <div class="col text-right">$ {{totalPrice}}</div>
-      </div>
-
-      <button class="btn" style="border-radius: 5px">CHECKOUT</button>
     </div>
   </div>
 
-</div>
-</div>
 
-
-<div class="text-center w-100">
+  <div class="text-center w-100">
 
 </div>
