@@ -8,6 +8,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { MenComponent } from './products/men/men.component';
 import { WomenComponent } from './products/women/women.component';
 import {FormsModule} from "@angular/forms";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 
 
@@ -18,11 +19,12 @@ import {FormsModule} from "@angular/forms";
     MenComponent,
     WomenComponent
   ],
-  imports: [
-    CommonModule,
-    ShopRoutingModule,
-    DataViewModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        ShopRoutingModule,
+        DataViewModule,
+        FormsModule,
+        Ng2SearchPipeModule
+    ]
 })
 export class ShopModule { }

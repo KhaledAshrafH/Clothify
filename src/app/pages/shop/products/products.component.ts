@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ProductServiceService} from "../../../services/product-service.service";
 import {CartService} from "../../../services/cart.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-products',
@@ -12,11 +13,13 @@ export class ProductsComponent implements OnInit {
   cartProducts:any=[];
   cartQuantity:any=[];
   added=-1;
+  exist=false;
   addButton:boolean=false;
   loading:boolean=false;
   amount: number=0;
   errorCheck=false;
   viewSelector:boolean=true;
+  filterTerm!: string;
   clothesType: string ="All Clothes";
   constructor(private _ProductServiceService:ProductServiceService,private _CartService:CartService) {
 
@@ -58,7 +61,7 @@ export class ProductsComponent implements OnInit {
       this.loading=false;
     });
   }
-  addToCart(index: number) {
+  addToCart(index: number){
     this.added=index;
     if(!localStorage.getItem("cart")){
       localStorage.setItem("cart", "[]");
@@ -79,9 +82,10 @@ export class ProductsComponent implements OnInit {
       if(!check){
         cart.push(this.allData[this.added]);
         cartQ.push(this.amount);
+        this.exist=false;
       }
       else {
-        alert("Element already exist");
+        this.exist=true;
       }
     }
     localStorage.setItem("cart", JSON.stringify(cart));

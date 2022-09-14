@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { BannerComponent } from './common/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome"; // CLI imports AppRoutingModule
 import {ReactiveFormsModule} from "@angular/forms";
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
@@ -22,6 +23,7 @@ import {FormsModule} from "@angular/forms";
 import {TokenInterceptorService} from "./services/token-interceptor.service";
 import { AdminComponent } from './Admin/admin/admin.component';
 import { CreateComponent } from './Admin/create/create.component';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { CreateComponent } from './Admin/create/create.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
 
   ],
   providers: [

@@ -15,6 +15,8 @@ export class WomenComponent implements OnInit {
   addButton:boolean=false;
   loading:boolean=false;
   amount: number=0;
+  filterTerm!: string;
+  exist=false;
   errorCheck=false;
   viewSelector:boolean=false;
   clothesType: string ="WOMEN";
@@ -58,9 +60,10 @@ export class WomenComponent implements OnInit {
       if(!check){
         cart.push(this.allData[this.added]);
         cartQ.push(this.amount);
+        this.exist=false;
       }
       else {
-        alert("Element already exist");
+        this.exist=true;
       }
     }
     localStorage.setItem("cart", JSON.stringify(cart));

@@ -15,6 +15,8 @@ export class MenComponent implements OnInit {
   loading:boolean=false;
   amount: number=0;
   errorCheck=false;
+  filterTerm!: string;
+  exist=false;
   viewSelector:boolean=false;
   clothesType: string ="MEN";
   constructor(private _ProductServiceService:ProductServiceService) {
@@ -58,9 +60,10 @@ export class MenComponent implements OnInit {
       if(!check){
         cart.push(this.allData[this.added]);
         cartQ.push(this.amount);
+        this.exist=false;
       }
       else {
-        alert("Element already exist");
+        this.exist=true;
       }
     }
     localStorage.setItem("cart", JSON.stringify(cart));

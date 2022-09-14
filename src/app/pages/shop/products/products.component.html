@@ -8,10 +8,16 @@
     </select>
   </div>
 </div>
-<h1 class="fontHeader" *ngIf="!loading && !errorCheck">{{clothesType}}</h1>
+<h1 class="fontHeader" *ngIf="!loading && !errorCheck" style="margin-top: 3vh;margin-bottom: 1vh">{{clothesType}}</h1>
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative" *ngIf="!loading && !errorCheck">
   <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-    <div class="col hp"  *ngFor="let item of allData; index as i">
+
+    <div style="width: 100%;">
+        <input class="input-elevated form-control" type="text" [(ngModel)]="filterTerm" autocomplete="off" placeholder="Start searching by price, name or description">
+    </div>
+
+    <div class="col hp"  *ngFor="let item of allData|filter:filterTerm; index as i">
+
       <div class="card h-100 shadow-sm">
         <a [routerLink]="['/shop/productDetails',i]">
           <img [src]="item['image']" class="card-img-top" alt="product.title" width="200px" height="50px" />
@@ -35,7 +41,8 @@
               <input type="number" class="form-control" required [(ngModel)]="amount">
             </div>
             <button class="btn btn-primary" type="submit" style="background-color: #730a44; border-color: #730a44" (click)="addToCart(i)" *ngIf="added!==i">Add to Cart</button>
-            <button class="btn btn-primary" type="submit" style="background-color: #102036; border-color: #102036; animation-delay: 1000ms; margin: 3vh" (click)="addToCart(i) " *ngIf="added===i" >Added</button>
+            <button class="btn btn-primary" type="submit" style="background-color: #102036; border-color: #102036; animation-delay: 1000ms; margin: 3vh" (click)="addToCart(i) " *ngIf="added===i && !exist" >Added</button>
+            <button class="btn btn-primary" type="submit" style="background-color: #102036; border-color: #102036; animation-delay: 1000ms; margin: 3vh" (click)="addToCart(i) " *ngIf="added===i && exist" >Item already exist in your cart</button>
 
 
           </div>

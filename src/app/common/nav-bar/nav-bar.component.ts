@@ -11,7 +11,9 @@ import {Router} from "@angular/router";
 export class NavBarComponent implements OnInit {
 
   public numOfItemsAdded = 0;
+  checkPress=false;
   //public userLogin:boolean=true;
+  imgProfilePath="assets/pics/man.png";
   public userLogin: string = JSON.stringify(localStorage.getItem('userLogin'));
 
   constructor(private _CartService: CartService, private _AuthService: AuthService, private _Router: Router) {
@@ -19,6 +21,7 @@ export class NavBarComponent implements OnInit {
     this.numOfItemsAdded = JSON.parse(localStorage.getItem('cartQ')!).length;
     console.log(this.userLogin.length);
     console.log(localStorage.getItem('token'));
+
   }
 
   ngOnInit(): void {
@@ -53,4 +56,9 @@ export class NavBarComponent implements OnInit {
         window.location.reload();
       });
   }
+
+  showDetails() {
+    this.checkPress=!this.checkPress;
+  }
+
 }
