@@ -25,3 +25,7 @@
   padding-bottom: 2rem!important;
   padding-top: 2rem!important;
 }
+
+.rounded-pill:hover{
+  background: #FFC107;
+}

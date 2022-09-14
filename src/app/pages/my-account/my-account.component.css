@@ -1,3 +1,10 @@
 .padding{
   padding:10vh;
 }
+label{
+  margin-left: 0.5vh;
+}
+
+.marButtom{
+  margin-bottom: 1.5vh;
+}

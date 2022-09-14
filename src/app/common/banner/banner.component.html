@@ -1,8 +1,8 @@
-<swiper [config]="config" style="width: 100%;margin:auto;height: 20rem" *ngIf="!check">
+<swiper [config]="config" style="width: 100%;margin:auto;height: 20rem" *ngIf="!check && !check2">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%"></div>
-    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%"></div>
-    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%;height: 100%"></div>
 
 
 
@@ -17,11 +17,31 @@
 </swiper>
 
 
+<swiper [config]="config" style="width: 100%;margin:auto;height: 10rem" *ngIf="!check && check2">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%;height: 100%"></div>
+
+
+
+  </div>
+  <div>
+    <div class="swiper-pagination" style="z-index: 1"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next" style="z-index: 1"></div>
+    <div class="swiper-button-prev" style="z-index: 1"></div>
+  </div>
+  <!-- Add Pagination -->
+</swiper>
+
+
+
 <swiper [config]="config" style="width: 100%;margin:auto;height: 30rem" *ngIf="check">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%"></div>
-    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%"></div>
-    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/burgess-milner-OYYE4g-I5ZQ-unsplash.jpg" alt="img 1" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="img 2" style="width: 100%;height: 100%"></div>
+    <div class="swiper-slide"><img src="./assets/man-in-suit-on-stairs.jpg" class="d-block w-100" alt="img 3" style="width: 100%;height: 100%"></div>
 
 
   </div>

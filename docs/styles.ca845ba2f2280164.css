@@ -1,4 +1,4 @@
-body{background-color:#d9beb4}@charset "UTF-8";/*!
+body{background-color:#d9beb4}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#FFF}::-webkit-scrollbar-thumb{background:#ffc107}::-webkit-scrollbar-thumb:hover{background:#ffd146}@charset "UTF-8";/*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.

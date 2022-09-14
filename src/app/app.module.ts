@@ -24,6 +24,8 @@ import {TokenInterceptorService} from "./services/token-interceptor.service";
 import { AdminComponent } from './Admin/admin/admin.component';
 import { CreateComponent } from './Admin/create/create.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    MessagesModule,
+    MessageModule
 
   ],
   providers: [

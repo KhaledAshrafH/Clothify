@@ -17,8 +17,9 @@ footer{
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-  padding: 50px 50px 60px 50px;
+  padding: 8vh 8vh 8vh 8vh;
   margin-top: 80px;
+
 }
 
 .footer-distributed .footer-left,

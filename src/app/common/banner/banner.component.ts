@@ -19,11 +19,13 @@ export class BannerComponent implements OnInit {
     }
   ]
   w = 0;
+  check2=false;
   check=false;
   constructor() {
     this.w = window.innerWidth;
     if(this.w>625) this.check=true;
     else this.check=false;
+    if(this.w<=450) this.check2=true;
   }
   config: SwiperOptions = {
     pagination: {

@@ -12,38 +12,55 @@
       <h3>Personal info</h3>
 
       <form class="form-horizontal" role="form" [formGroup]="profileForm" (ngSubmit)="updateData()">
+        <div *ngIf="profileForm.errors?.notMatched">
+          <div class="alert alert-danger" role="alert">
+              Password not matched.Try Again!
+          </div>
+        </div>
+
+        <div *ngIf="profileForm.errors?.unauthenticated">
+          <div class="alert alert-danger" role="alert">
+              Error in your data.Try Again!
+          </div>
+        </div>
+        <div *ngIf="profileForm.errors?.successfully">
+          <div class="alert alert-success" role="alert">
+            Your Data Updated Successfully.
+          </div>
+        </div>
+
         <div class="form-group">
-          <label class="col-lg-3 control-label">name:</label>
+          <label class="col-lg-3 control-label">Username:</label>
           <div class="col-lg-8">
-            <input formControlName="name" class="form-control" type="text" [value]="name">
+            <input formControlName="name" class="form-control marButtom" type="text" [value]="name">
           </div>
         </div>
 
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input formControlName="email" class="form-control" type="text" [value]="email" readonly>
+            <input formControlName="email" class="form-control marButtom" type="text" [value]="email" readonly>
           </div>
         </div>
 
         <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
-            <input formControlName="password" class="form-control" type="password" >
+            <input formControlName="password" class="form-control marButtom" type="password" >
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label">Confirm password:</label>
+          <label class="col-md-3 control-label">Confirm Password:</label>
           <div class="col-md-8">
-            <input class="form-control" type="password">
+            <input formControlName="confirmPassword" class="form-control" type="password">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input type="submit" class="btn btn-primary" value="Save Changes">
+<!--            <button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" *ngIf="((userLogin.length-2) == 0 || !checkLogin())" routerLink="auth/register">Register</button>-->
+            <input type="submit" class="btn btn-warning" value="Save Changes" style=" font-weight: bolder; border-radius: 7px">
             <span></span>
-<!--            <input type="reset" class="btn btn-default" value="Cancel">-->
           </div>
         </div>
       </form>
