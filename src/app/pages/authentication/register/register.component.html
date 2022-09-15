@@ -1,4 +1,11 @@
 <form [formGroup]="registerForm" class="row gy-2 " class="form-signin" (ngSubmit)="userRegister()" style="margin-top: 2rem">
+  <div *ngIf="registerForm.errors?.AlreadyExist">
+    <div class="alert alert-danger" role="alert">
+      Error! May This Account Already Exist or your information not complete.
+    </div>
+  </div>
+
+
   <img class="mb-4" src="assets/pics/—Pngtree—smiling%20people%20avatar%20set%20different_7690740.png" alt="avatar" width="100" height="100">
   <h1 class="h3 mb-3 fw-normal" class="text-center">Please Register</h1>
   <div class="col-12">

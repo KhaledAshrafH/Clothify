@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
       this.state=data;
       this._Router.navigate(['/home'])
     },error =>{
-      alert("Error")
+      this.registerForm.setErrors({ AlreadyExist: true });
     });
 
   }

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {ErrorHandler} from "../ErrorHandlers/methodErrorHandler";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute,Router} from "@angular/router";
@@ -19,7 +18,6 @@ export class AuthService {
   private _usersURL = `http://localhost:3000/auth/system-users`;
   private _userDataURL = `http://localhost:3000/auth/user-main-data`;
 
-  errorsHandler = new ErrorHandler();
   public name: string="";
   public email: string="";
   public isLogin=false;
