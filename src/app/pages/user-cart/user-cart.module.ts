@@ -6,16 +6,15 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
 
-
 @NgModule({
   declarations: [
     CartComponent,
     CheckoutComponent,
-    PaymentComponent
+    PaymentComponent,
   ],
   imports: [
     CommonModule,
-    UserCartRoutingModule
+    UserCartRoutingModule,
   ]
 })
 export class UserCartModule { }
