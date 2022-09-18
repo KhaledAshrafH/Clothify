@@ -1,27 +1,94 @@
 
-  <td><button class="btn btn-warning" type="submit" style=" margin-top:4vh;margin-left:2vh;font-weight: bolder;" routerLink="/create" >Add Item</button></td>
-<table class="table table-dark" style="margin-top: 1vh;">
+<!--  <td><button class="btn btn-warning" type="submit" style=" margin-top:4vh;margin-left:2vh;font-weight: bolder;" routerLink="/create" >Add Item</button></td>-->
+<!--<table class="table table-dark" style="margin-top: 1vh;">-->
 
-  <thead>
-  <tr>
-    <th scope="col">#ID</th>
-    <th scope="col">Product Name</th>
-    <th scope="col">Description</th>
-    <th scope="col">Price</th>
-    <th scope="col" style>Delete Item</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let product of products">
-    <td>{{product.id}}</td>
-    <td>{{product.name}}</td>
-    <td>{{product.description}}</td>
-    <td>{{product.price}}</td>
-    <td><button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" (click)="removeItem(product.id)">Remove</button></td>
-    <td>
-    </td>
-  </tr>
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th scope="col"></th>-->
+<!--    <th scope="col">Product Name</th>-->
+<!--    <th scope="col">Description</th>-->
+<!--    <th scope="col">Price</th>-->
+<!--    <th scope="col" style>Delete Item</th>-->
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--  <tr *ngFor="let product of products">-->
+<!--    <td>{{product.id}}</td>-->
+<!--    <td>{{product.name}}</td>-->
+<!--    <td>{{product.description}}</td>-->
+<!--    <td>{{product.price}}</td>-->
+<!--    <td><button class="btn btn-warning" type="submit" style=" margin-left: 2vh; font-weight: bolder" (click)="removeItem(product.id)">Remove</button></td>-->
+<!--    <td>-->
+<!--    </td>-->
+<!--  </tr>-->
 
-  </tbody>
-</table>
+<!--  </tbody>-->
+<!--</table>-->
+
+
+<div class="container-xl" >
+  <div class="table-responsive" style="box-shadow: 2px 2px 15px #aaaaaa;margin-bottom: 5vh;border-radius: 15px; margin-top: 6vh;">
+    <div class="table-wrapper" >
+      <div class="table-title" style="background-color:#212529; padding: 2vh!important; color: white;" >
+        <div class="row" >
+          <div class="col-sm-6" >
+            <h4><h3 style="    --bs-text-opacity: 1;
+    color: rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important;font-family: system-ui,-apple-system">Manage Products</h3></h4>
+          </div>
+          <div class="col-sm-6">
+            <button class="btn btn-success" type="submit" routerLink="/create" style="margin-left:65vh ">
+              <i class='bi bi-plus-circle'></i><span> Add Product</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover table-bordered table-content" style="background-color: white;">
+        <thead>
+        <tr class="center-align" style="text-align: center">
+          <th style="font-weight: bolder">#ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products" class="center-align" style="text-align: center">
+          <td style="font-weight: bold">{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}$</td>
+          <td style="text-align: center">
+            <a href="#" [routerLink]="['/shop/productDetails/', product.id]" class="btn"><i class='bi bi-eye view' style="color: #2500ff"></i></a>
+<!--            <a href="#" [routerLink]="['/EditEmployee/', employee.id]" class="btn"><i class="fa fa-edit edit"></i></a>-->
+            <button type="button" (click)="removeItem(product.id)" class="btn"><i class='bi bi-trash' style="color: red"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td *ngIf="products.length == 0" colspan="6">No Employee Found</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
