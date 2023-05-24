@@ -1,4 +1,3 @@
-# OnlineShoppingWebsite
+# Online Shopping Website
 
-Online Shopping (Clothes) using Angular.
-E-Commerce Project
+Online Shopping using Angular.
