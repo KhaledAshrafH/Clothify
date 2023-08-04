@@ -19,19 +19,21 @@ The website has the following features:
 ## Project Honors
 This project was honored by Banque Misr (Digital Factory) as the best front end project and the full project was one of the top three projects in the internship. Here are some photos of the honoring ceremony:
 
-![Honoring photo 1]
-![Honoring photo 2]
+![My Cirtficate 1](https://github.com/KhaledAshrafH/Clothify-System/blob/main/IMG_20220925_200914.jpg)
+![My Cirtficate 2](https://github.com/KhaledAshrafH/Clothify-System/blob/main/2Z8A3260.jpg)
+![My Cirtficate 3](https://github.com/KhaledAshrafH/Clothify-System/blob/main/Untitled-8-02.png)
+
 
 ## Project Certificate
 I received a certificate of completion from Banque Misr (Digital Factory) for this project. Here is a photo of the certificate:
 
-![Certificate photo]
+![Certificate photo](https://github.com/KhaledAshrafH/Clothify-System/blob/main/1665131190316.jpeg)
 
 ## Project Team
 This project was developed by a frontend team of two members:
 
-- [Khaled Ashraf]()
-- [Farah Amr]()
+- [Khaled Ashraf](https://github.com/KhaledAshrafH)
+- [Farah Amr](https://github.com/Farah2001)
 
 ## Project Feedback
 I would appreciate any feedback or suggestions for improving this project. You can contact me at 5aleda4rf@gmail.com or leave a comment on GitHub. Thank you for your interest in Clothify-System!
