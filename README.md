@@ -16,6 +16,7 @@ The website has the following features:
 - Administration page: A page for managing products. Only authorized users can access this page. A user can add, edit, or delete products.
 
 ## Project Setup
+
 To install and run the project locally, you need to follow these steps:
 
 1. Clone or download the repository from GitHub.
